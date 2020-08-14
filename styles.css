@@ -1,0 +1,28 @@
+﻿/* Nav Bar */
+
+.container {
+    display:flex;
+    flex-direction:row;
+    float:right;
+}
+
+.container div {
+    margin:20px;
+}
+
+/* Map */
+
+.booking-container {
+    display:flex;
+    flex-direction:row;
+}
+#mapid {
+    height: 300px;
+    width: 50%;
+    margin-left:10px;
+    margin-top:10px;
+  }
+
+.form-container {
+    margin:10px;
+}
