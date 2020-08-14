@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+
+        <title>Mulhouse - Réservation de location de vélos</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+              integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+              crossorigin="" />
+
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+                integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+                crossorigin=""></script>
+
+    </head>
+
+        <body>
+            <!-- Nav Bar -->
+            <div class="container">
+                <div>Accueil</div>
+                <div>Diaporama</div>
+                <div>Carte</div>
+                <div>Ma Réservation</div>
+            </div>
+            
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/mulhouse.jpg" alt />
+                        <div class="carousel-caption">
+                            <h3>Mulhouse</h3>
+                            <p>Réservation de location de vélos</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="images/velocite1.jpg" alt />
+                    </div>
+
+                    <div class="item">
+                        <img src="images/velocite2.jpg" alt />
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+            <div class="booking-container">
+                <div id="mapid"></div>
+                <div class="form-container">
+                    <div class="form-heading">
+                        <h3>Détails de la station</h3>
+                        <hr/>
+                    </div>
+                    <div class="form-body">
+                        <p><strong>Adresse : </strong></p>
+                        <p id="adress"></p>
+
+                        <p><span id="numberTotalBikes">0</span> places</p>
+                        <p><span id="numberAvailableBikes">0</span> vélos disponibles</p>
+                    </div>
+                   
+
+
+                </div>
+            </div>
+            
+            <script src="map.js" ></script>
+
+        </body>
+
+    </html> 
